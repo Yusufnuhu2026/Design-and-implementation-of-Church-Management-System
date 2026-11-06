@@ -1,0 +1,1014 @@
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #333;
+    background: #fff;
+    line-height: 1.7;
+}
+
+:root {
+    --green: #174b35;
+    --dark-green: #103524;
+    --gold: #d5a94f;
+    --light: #f6f8f5;
+    --text: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 85px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.logo strong {
+    display: block;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.logo small {
+    display: block;
+    font-size: 11px;
+    color: #777;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+.navbar .nav-button {
+    background: var(--green);
+    color: white;
+    padding: 11px 18px;
+    border-radius: 5px;
+}
+
+.navbar .nav-button:hover {
+    background: var(--gold);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 27px;
+    color: var(--green);
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 600px;
+    background: url('https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1800') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 32, 21, 0.88),
+        rgba(8, 32, 21, 0.35)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-tag {
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    margin: 20px 0;
+    max-width: 750px;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #eee;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--green);
+}
+
+
+/* =========================
+   SERVICE STRIP
+========================= */
+
+.service-strip {
+    background: var(--green);
+    color: white;
+    padding: 25px 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-item > span {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+.service-item h3 {
+    font-size: 17px;
+}
+
+.service-item p {
+    font-size: 12px;
+    color: #ddd;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2,
+.about-content h2,
+.prayer-text h2 {
+    color: var(--green);
+    font-size: clamp(28px, 4vw, 39px);
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 15px 22px;
+    border-left: 4px solid var(--gold);
+}
+
+.image-caption strong,
+.image-caption span {
+    display: block;
+}
+
+.image-caption strong {
+    color: var(--green);
+}
+
+.image-caption span {
+    font-size: 12px;
+    color: #777;
+}
+
+.about-content h2 {
+    line-height: 1.4;
+}
+
+.about-content p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 17px;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 25px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green);
+}
+
+
+/* =========================
+   VISION AND MISSION
+========================= */
+
+.vision-section {
+    background: var(--green);
+    padding: 70px 0;
+    color: white;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.light {
+    color: var(--gold);
+}
+
+.vision-grid h2 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.vision-grid p {
+    color: #e2e8e3;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MINISTRIES
+========================= */
+
+.ministries {
+    background: var(--light);
+}
+
+.ministry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.ministry-card {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.ministry-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.ministry-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--green);
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.card-content p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================
+   LEADERSHIP
+========================= */
+
+.leader-card {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center;
+    background: var(--light);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.leader-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.leader-info h3 {
+    color: var(--green);
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.leader-info p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.text-link {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+
+/* =========================
+   EVENTS
+========================= */
+
+.events {
+    background: var(--light);
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.event-card img {
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event-date {
+    color: #a77b27;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.event-content h3 {
+    color: var(--green);
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.event-content p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================
+   SERMONS
+========================= */
+
+.sermon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.sermon-card {
+    padding: 25px;
+    background: var(--light);
+    border-radius: 9px;
+    border-bottom: 3px solid var(--gold);
+}
+
+.sermon-icon {
+    font-size: 30px;
+}
+
+.sermon-card h3 {
+    color: var(--green);
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.sermon-card p {
+    color: #777;
+    font-size: 13px;
+}
+
+.sermon-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   ANNOUNCEMENTS
+========================= */
+
+.announcement-section {
+    background: var(--dark-green);
+    color: white;
+    padding: 45px 0;
+}
+
+.announcement-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.announcement-content h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.announcement-content p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.announcement-icon {
+    font-size: 55px;
+}
+
+
+/* =========================
+   PRAYER REQUEST
+========================= */
+
+.prayer {
+    background: var(--light);
+}
+
+.prayer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.prayer-text p {
+    font-size: 14px;
+    color: #777;
+    margin: 20px 0;
+}
+
+.prayer-verse {
+    border-left: 4px solid var(--gold);
+    padding-left: 15px;
+}
+
+.prayer-verse strong {
+    display: block;
+    color: var(--green);
+    margin-top: 8px;
+}
+
+.prayer-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.prayer-form h3 {
+    color: var(--green);
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.prayer-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 13px 0 6px;
+}
+
+.prayer-form input,
+.prayer-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.prayer-form input:focus,
+.prayer-form textarea:focus {
+    border-color: var(--green);
+}
+
+.prayer-form textarea {
+    resize: vertical;
+}
+
+.prayer-form button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.prayer-form small {
+    display: block;
+    margin-top: 12px;
+    color: #888;
+    font-size: 11px;
+}
+
+.feedback {
+    font-size: 13px;
+    margin-top: 10px;
+    color: var(--green);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 25px 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.contact-card span {
+    font-size: 30px;
+}
+
+.contact-card h3 {
+    color: var(--green);
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.contact-card p {
+    color: #777;
+    font-size: 12px;
+}
+
+.contact-action {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px 20px;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.contact-action h3 {
+    color: var(--green);
+    font-size: 26px;
+}
+
+.contact-action p {
+    color: #777;
+    margin: 10px 0 20px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #102d20;
+    color: white;
+    padding-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer-logo .logo-icon {
+    background: var(--gold);
+}
+
+.footer-logo small {
+    color: #ccc;
+}
+
+.footer-grid p {
+    max-width: 350px;
+    color: #bbb;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.footer-grid h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-grid > div > a:not(.logo) {
+    display: block;
+    color: #bbb;
+    font-size: 13px;
+    margin: 9px 0;
+}
+
+.footer-grid a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid #355044;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #bbb;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .ministry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .nav-container {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5% 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 12px 5px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    .navbar .nav-button {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-grid,
+    .vision-grid,
+    .prayer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 320px;
+    }
+
+    .vision-grid {
+        gap: 35px;
+    }
+
+    .event-grid,
+    .sermon-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leader-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .leader-card img {
+        height: 350px;
+    }
+
+    .announcement-content h2 {
+        font-size: 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-tag {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ministry-grid,
+    .event-grid,
+    .sermon-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ministry-card img,
+    .event-card img {
+        height: 220px;
+    }
+
+    .about-points {
+        grid-template-columns: 1fr;
+    }
+
+    .announcement-content {
+        align-items: flex-start;
+    }
+
+    .announcement-icon {
+        font-size: 35px;
+    }
+
+    .prayer-form {
+        padding: 22px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
